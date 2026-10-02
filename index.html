@@ -1,0 +1,1154 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>English Assessment - Grade 8 SMP</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f0fdf4',
+              100: '#dcfce7',
+              500: '#22c55e',
+              600: '#16a34a',
+              700: '#15803d',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <!-- Inter Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: rgba(0, 0, 0, 0.05);
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(100, 116, 139, 0.3);
+      border-radius: 9999px;
+    }
+    /* Print Styles */
+    @media print {
+      body {
+        background: #fff !important;
+        color: #000 !important;
+      }
+      .no-print {
+        display: none !important;
+      }
+      .print-only {
+        display: block !important;
+      }
+      .break-inside-avoid {
+        break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body class="bg-slate-50 dark:bg-slate-900 text-slate-800 dark:text-slate-100 min-h-screen transition-colors duration-200 flex flex-col">
+
+  <!-- Header Bar -->
+  <header class="no-print sticky top-0 z-40 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 transition-colors">
+    <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-indigo-600 flex items-center justify-center text-white font-black text-xl shadow-lg shadow-indigo-500/30">
+          E8
+        </div>
+        <div>
+          <h1 class="text-base font-bold leading-tight text-slate-900 dark:text-white">English Grade 8 SMP</h1>
+          <p class="text-xs text-slate-500 dark:text-slate-400">Interactive Quiz & Evaluation</p>
+        </div>
+      </div>
+
+      <!-- Controls -->
+      <div class="flex items-center gap-2">
+        <!-- Sound Toggle -->
+        <button id="btn-sound" onclick="toggleSound()" class="p-2.5 rounded-xl border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 transition text-slate-600 dark:text-slate-300" title="Toggle Sound">
+          <svg id="icon-sound-on" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path></svg>
+          <svg id="icon-sound-off" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15zM17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2"></path></svg>
+        </button>
+
+        <!-- Theme Toggle -->
+        <button onclick="toggleTheme()" class="p-2.5 rounded-xl border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 transition text-slate-600 dark:text-slate-300" title="Toggle Theme">
+          <svg id="icon-theme-dark" class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+          <svg id="icon-theme-light" class="w-5 h-5 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Container -->
+  <main class="flex-1 max-w-5xl w-full mx-auto p-4 md:p-6 flex flex-col">
+
+    <!-- START SCREEN -->
+    <section id="screen-start" class="my-auto py-8">
+      <div class="max-w-2xl mx-auto bg-white dark:bg-slate-800/90 rounded-3xl border border-slate-200/80 dark:border-slate-700/80 p-6 md:p-10 shadow-xl shadow-slate-200/50 dark:shadow-none transition-all">
+        <div class="text-center mb-8">
+          <span class="inline-block px-3.5 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider bg-indigo-50 dark:bg-indigo-950/80 text-indigo-600 dark:text-indigo-400 border border-indigo-200 dark:border-indigo-800 mb-3">
+            Bahasa Inggris Kelas 8 SMP
+          </span>
+          <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+            Comprehensive Quiz & Pembahasan
+          </h2>
+          <p class="text-sm md:text-base text-slate-600 dark:text-slate-400 mt-2">
+            Uji pemahaman tatabahasa, kosakata, serta pemahaman teks sesuai kurikulum terbaru.
+          </p>
+        </div>
+
+        <!-- Topics Covered Badges -->
+        <div class="mb-8 p-4 rounded-2xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200/60 dark:border-slate-800">
+          <p class="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-3">Materi Yang Diuji (20 Soal):</p>
+          <div class="flex flex-wrap gap-2 text-xs font-medium">
+            <span class="px-2.5 py-1 rounded-lg bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">Asking & Giving Opinion</span>
+            <span class="px-2.5 py-1 rounded-lg bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">Modals (Must/Should)</span>
+            <span class="px-2.5 py-1 rounded-lg bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">Simple Past Tense</span>
+            <span class="px-2.5 py-1 rounded-lg bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">Present & Past Continuous</span>
+            <span class="px-2.5 py-1 rounded-lg bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">Degrees of Comparison</span>
+            <span class="px-2.5 py-1 rounded-lg bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">Recount Text</span>
+            <span class="px-2.5 py-1 rounded-lg bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">Narrative Text (Fable)</span>
+            <span class="px-2.5 py-1 rounded-lg bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">Notice & Caution</span>
+            <span class="px-2.5 py-1 rounded-lg bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">Greeting Cards</span>
+          </div>
+        </div>
+
+        <!-- Inputs Form -->
+        <div class="space-y-5">
+          <div>
+            <label for="input-student-name" class="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-1.5">
+              Nama Lengkap Siswa <span class="text-rose-500">*</span>
+            </label>
+            <input type="text" id="input-student-name" placeholder="Contoh: Budi Santoso" class="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-900 text-slate-900 dark:text-white focus:ring-2 focus:ring-indigo-500 focus:outline-none text-sm transition">
+            <p id="error-name" class="hidden text-xs text-rose-500 mt-1">Harap masukkan nama lengkap Anda sebelum memulai.</p>
+          </div>
+
+          <div>
+            <label class="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-1.5">
+              Pilihan Pengatur Waktu (Timer)
+            </label>
+            <div class="grid grid-cols-2 gap-3">
+              <label class="relative flex items-center p-3.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 cursor-pointer hover:border-indigo-500 transition">
+                <input type="radio" name="timer-mode" value="20" checked class="text-indigo-600 focus:ring-indigo-500">
+                <span class="ml-2.5 text-xs md:text-sm font-medium text-slate-800 dark:text-slate-200">20 Menit (Standar)</span>
+              </label>
+              <label class="relative flex items-center p-3.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 cursor-pointer hover:border-indigo-500 transition">
+                <input type="radio" name="timer-mode" value="untimed" class="text-indigo-600 focus:ring-indigo-500">
+                <span class="ml-2.5 text-xs md:text-sm font-medium text-slate-800 dark:text-slate-200">Tanpa Batas Waktu</span>
+              </label>
+            </div>
+          </div>
+
+          <button onclick="startQuiz()" class="w-full mt-2 py-3.5 px-6 rounded-xl bg-indigo-600 hover:bg-indigo-700 active:scale-[0.99] text-white font-bold text-base shadow-lg shadow-indigo-500/25 transition duration-200 flex items-center justify-center gap-2">
+            <span>Mulai Pengerjaan Kuis</span>
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUIZ SCREEN -->
+    <section id="screen-quiz" class="hidden flex-1 flex flex-col space-y-4">
+      
+      <!-- Quiz Header Controls -->
+      <div class="bg-white dark:bg-slate-800 rounded-2xl p-4 border border-slate-200 dark:border-slate-700/80 shadow-sm flex flex-wrap items-center justify-between gap-3">
+        <div class="flex items-center gap-3">
+          <span id="badge-question-num" class="px-3 py-1 rounded-lg bg-indigo-50 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400 font-bold text-xs">
+            Soal 1 dari 20
+          </span>
+          <span id="badge-category" class="px-3 py-1 rounded-lg bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 text-xs font-semibold truncate max-w-[180px] md:max-w-xs">
+            Category
+          </span>
+        </div>
+
+        <div class="flex items-center gap-3 ml-auto">
+          <!-- Timer Display -->
+          <div id="container-timer" class="flex items-center gap-1.5 px-3 py-1 rounded-lg bg-amber-50 dark:bg-amber-950/60 border border-amber-200 dark:border-amber-800 text-amber-700 dark:text-amber-300 font-mono font-bold text-xs">
+            <svg class="w-4 h-4 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            <span id="timer-text">20:00</span>
+          </div>
+
+          <!-- Palette Button -->
+          <button onclick="togglePaletteModal()" class="flex items-center gap-1.5 px-3 py-1 rounded-lg border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-700 text-xs font-semibold text-slate-700 dark:text-slate-200 transition">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 14a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 14a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg>
+            <span>Daftar Soal</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Progress Bar -->
+      <div class="w-full bg-slate-200 dark:bg-slate-800 h-2 rounded-full overflow-hidden">
+        <div id="progress-bar-inner" class="bg-indigo-600 h-full w-0 transition-all duration-300"></div>
+      </div>
+
+      <!-- Question Card Container -->
+      <div class="bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700/80 p-6 md:p-8 shadow-sm flex-1 flex flex-col justify-between space-y-6">
+        
+        <div class="space-y-4">
+          <!-- Reading Passage (if applicable) -->
+          <div id="passage-box" class="hidden p-4 md:p-5 rounded-2xl bg-slate-50 dark:bg-slate-900/80 border-l-4 border-indigo-500 text-sm md:text-base leading-relaxed text-slate-700 dark:text-slate-300 italic font-serif">
+          </div>
+
+          <!-- Question Text -->
+          <h2 id="question-text" class="text-base md:text-lg font-bold text-slate-900 dark:text-white leading-relaxed">
+            Question text goes here...
+          </h2>
+
+          <!-- Options Grid -->
+          <div id="options-container" class="grid grid-cols-1 gap-3 pt-2">
+            <!-- Dynamic Option Buttons -->
+          </div>
+        </div>
+
+        <!-- Navigation Controls Footer -->
+        <div class="flex items-center justify-between pt-4 border-t border-slate-100 dark:border-slate-700/60">
+          <button id="btn-prev" onclick="prevQuestion()" class="px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-700 font-semibold text-xs md:text-sm text-slate-700 dark:text-slate-200 transition flex items-center gap-1.5 disabled:opacity-40 disabled:cursor-not-allowed">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+            <span>Sebelumnya</span>
+          </button>
+
+          <!-- Bookmark Toggle -->
+          <button id="btn-flag" onclick="toggleFlag()" class="px-3.5 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-700 font-semibold text-xs md:text-sm text-slate-600 dark:text-slate-300 transition flex items-center gap-1.5">
+            <svg id="icon-flag" class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path></svg>
+            <span id="text-flag">Tandai</span>
+          </button>
+
+          <button id="btn-next" onclick="nextQuestion()" class="px-5 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-xs md:text-sm transition flex items-center gap-1.5 shadow-md shadow-indigo-500/20">
+            <span id="text-btn-next">Selanjutnya</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- PALETTE MODAL / DRAWER -->
+    <div id="modal-palette" class="no-print fixed inset-0 z-50 bg-slate-900/50 backdrop-blur-sm hidden flex items-center justify-center p-4">
+      <div class="bg-white dark:bg-slate-800 rounded-3xl max-w-md w-full p-6 border border-slate-200 dark:border-slate-700 shadow-2xl">
+        <div class="flex items-center justify-between mb-4">
+          <h3 class="text-lg font-bold text-slate-900 dark:text-white">Navigasi Soal</h3>
+          <button onclick="togglePaletteModal()" class="p-1 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-500">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+          </button>
+        </div>
+
+        <!-- Legend -->
+        <div class="flex items-center justify-between text-xs text-slate-500 dark:text-slate-400 mb-4 pb-3 border-b border-slate-100 dark:border-slate-700">
+          <div class="flex items-center gap-1.5"><span class="w-3 h-3 rounded-md bg-indigo-600"></span> Dijawab</div>
+          <div class="flex items-center gap-1.5"><span class="w-3 h-3 rounded-md bg-amber-400"></span> Ditandai</div>
+          <div class="flex items-center gap-1.5"><span class="w-3 h-3 rounded-md bg-slate-200 dark:bg-slate-700"></span> Belum</div>
+        </div>
+
+        <!-- Grid 1..20 -->
+        <div id="palette-grid" class="grid grid-cols-5 gap-2.5 mb-6">
+          <!-- Rendered via JS -->
+        </div>
+
+        <div class="flex gap-2">
+          <button onclick="togglePaletteModal()" class="w-full py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 font-semibold text-xs text-slate-700 dark:text-slate-300">
+            Tutup
+          </button>
+          <button onclick="confirmSubmitModal()" class="w-full py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs shadow-md shadow-emerald-500/20">
+            Selesaikan Kuis
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- RESULT SCREEN -->
+    <section id="screen-result" class="hidden py-6 space-y-8">
+      
+      <!-- Printable Header -->
+      <div class="hidden print-only mb-6 border-b pb-4">
+        <h1 class="text-2xl font-bold">Laporan Hasil Evaluasi Bahasa Inggris Kelas 8 SMP</h1>
+        <p class="text-sm text-slate-600">Nama Siswa: <span id="print-student-name" class="font-semibold"></span> | Tanggal: <span id="print-date"></span></p>
+      </div>
+
+      <!-- Score Hero Banner -->
+      <div class="no-print bg-white dark:bg-slate-800 rounded-3xl border border-slate-200 dark:border-slate-700 p-6 md:p-8 shadow-lg text-center relative overflow-hidden">
+        <div class="max-w-lg mx-auto space-y-4">
+          <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300">
+            Hasil Akhir Evaluasi
+          </span>
+          
+          <div class="relative w-36 h-36 mx-auto flex items-center justify-center">
+            <svg class="w-full h-full transform -rotate-90" viewBox="0 0 36 36">
+              <path class="text-slate-100 dark:text-slate-700 stroke-current" stroke-width="3.5" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+              <path id="score-ring" class="text-indigo-600 stroke-current transition-all duration-1000 ease-out" stroke-dasharray="100, 100" stroke-width="3.5" stroke-linecap="round" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+            </svg>
+            <div class="absolute flex flex-col items-center">
+              <span id="result-score" class="text-4xl font-extrabold text-slate-900 dark:text-white">0</span>
+              <span class="text-xs font-semibold text-slate-400 uppercase">Nilai / 100</span>
+            </div>
+          </div>
+
+          <div>
+            <h3 id="result-grade-badge" class="text-xl font-bold text-slate-900 dark:text-white">Grade A</h3>
+            <p id="result-feedback" class="text-sm text-slate-500 dark:text-slate-400 mt-1">Sangat baik! Kamu menguasai sebagian besar materi.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stats Grid -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="bg-white dark:bg-slate-800 p-4 rounded-2xl border border-slate-200 dark:border-slate-700 flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-emerald-50 dark:bg-emerald-950/60 text-emerald-600 dark:text-emerald-400 flex items-center justify-center font-bold text-lg">✓</div>
+          <div>
+            <p class="text-xs text-slate-500 dark:text-slate-400 font-medium">Jawaban Benar</p>
+            <p id="stat-correct" class="text-xl font-extrabold text-slate-900 dark:text-white">0</p>
+          </div>
+        </div>
+        <div class="bg-white dark:bg-slate-800 p-4 rounded-2xl border border-slate-200 dark:border-slate-700 flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-rose-50 dark:bg-rose-950/60 text-rose-600 dark:text-rose-400 flex items-center justify-center font-bold text-lg">✕</div>
+          <div>
+            <p class="text-xs text-slate-500 dark:text-slate-400 font-medium">Jawaban Salah</p>
+            <p id="stat-wrong" class="text-xl font-extrabold text-slate-900 dark:text-white">0</p>
+          </div>
+        </div>
+        <div class="bg-white dark:bg-slate-800 p-4 rounded-2xl border border-slate-200 dark:border-slate-700 flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400 flex items-center justify-center font-bold text-lg">⏱</div>
+          <div>
+            <p class="text-xs text-slate-500 dark:text-slate-400 font-medium">Waktu Pengerjaan</p>
+            <p id="stat-time" class="text-xl font-extrabold text-slate-900 dark:text-white">00:00</p>
+          </div>
+        </div>
+        <div class="bg-white dark:bg-slate-800 p-4 rounded-2xl border border-slate-200 dark:border-slate-700 flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-amber-50 dark:bg-amber-950/60 text-amber-600 dark:text-amber-400 flex items-center justify-center font-bold text-lg">%</div>
+          <div>
+            <p class="text-xs text-slate-500 dark:text-slate-400 font-medium">Akurasi</p>
+            <p id="stat-accuracy" class="text-xl font-extrabold text-slate-900 dark:text-white">0%</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Review Section -->
+      <div class="bg-white dark:bg-slate-800 rounded-3xl border border-slate-200 dark:border-slate-700 p-6 md:p-8 space-y-6">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-4 border-b border-slate-100 dark:border-slate-700">
+          <div>
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white">Review & Pembahasan Soal</h3>
+            <p class="text-xs text-slate-500 dark:text-slate-400">Pelajari pembahasan detail untuk setiap materi soal di bawah ini.</p>
+          </div>
+
+          <!-- Category Filter Chips -->
+          <div id="filter-container" class="no-print flex flex-wrap gap-1.5">
+            <!-- Filter chips generated via JS -->
+          </div>
+        </div>
+
+        <!-- Explanations Accordion Container -->
+        <div id="review-list" class="space-y-4">
+          <!-- Rendered via JS -->
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="no-print flex flex-col sm:flex-row items-center justify-center gap-3 pt-4">
+        <button onclick="retakeQuiz()" class="w-full sm:w-auto px-6 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-sm shadow-md shadow-indigo-500/20 transition flex items-center justify-center gap-2">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
+          <span>Ulangi Kuis</span>
+        </button>
+        <button onclick="window.print()" class="w-full sm:w-auto px-6 py-3 rounded-xl border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 font-bold text-sm transition flex items-center justify-center gap-2">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path></svg>
+          <span>Cetak / Simpan Laporan (PDF)</span>
+        </button>
+      </div>
+
+    </section>
+
+  </main>
+
+  <script>
+    // -------------------------------------------------------------
+    // DATA: 20 CLASS 8 SMP ENGLISH QUESTIONS WITH PEMBAHASAN
+    // -------------------------------------------------------------
+    const quizData = [
+      {
+        id: 1,
+        category: "Asking & Giving Opinion",
+        passage: null,
+        question: "A: \"What do you think about our new English teacher?\"\nB: \"__________ she is very kind and explains the lesson clearly.\"",
+        options: [
+          "I don't agree",
+          "In my opinion",
+          "I am not sure",
+          "I must say no"
+        ],
+        answer: 1,
+        explanation: "Frasa 'In my opinion' (Menurut pendapat saya) adalah ungkapan standar untuk memberikan pendapat (giving opinion) setelah ditanya 'What do you think...?'."
+      },
+      {
+        id: 2,
+        category: "Modals of Obligation",
+        passage: null,
+        question: "You __________ wear a helmet when riding a motorcycle on the highway. It is the traffic law.",
+        options: [
+          "must",
+          "may",
+          "should not",
+          "couldn't"
+        ],
+        answer: 0,
+        explanation: "Kata 'must' digunakan untuk menyatakan kewajiban mutlak atau aturan hukum formal yang harus ditaati demi keselamatan."
+      },
+      {
+        id: 3,
+        category: "Giving Suggestion",
+        passage: null,
+        question: "Rian: \"I have a terrible toothache.\"\nSiti: \"You __________ see a dentist as soon as possible.\"",
+        options: [
+          "must not",
+          "should",
+          "will",
+          "would"
+        ],
+        answer: 1,
+        explanation: "Modal 'should' digunakan untuk memberikan saran atau masukan (giving suggestion) yang baik dilakukan oleh orang lain."
+      },
+      {
+        id: 4,
+        category: "Simple Past Tense",
+        passage: null,
+        question: "Last holiday, my family and I __________ to Bali by airplane.",
+        options: [
+          "go",
+          "goes",
+          "went",
+          "gone"
+        ],
+        answer: 2,
+        explanation: "Keterangan waktu 'Last holiday' menunjukkan kejadian di masa lalu (Simple Past Tense). Kata kerja yang tepat adalah bentuk kedua (Verb 2) yaitu 'went'."
+      },
+      {
+        id: 5,
+        category: "Simple Past Tense",
+        passage: null,
+        question: "Rina __________ not attend the scout activity yesterday because she was sick.",
+        options: [
+          "does",
+          "do",
+          "did",
+          "is"
+        ],
+        answer: 2,
+        explanation: "Bentuk negatif dari Simple Past Tense (ditandai kata 'yesterday') menggunakan kata kerja bantu 'did' + not + Verb 1."
+      },
+      {
+        id: 6,
+        category: "Present Continuous",
+        passage: null,
+        question: "Listen! The school choir __________ a beautiful national song in the hall right now.",
+        options: [
+          "sang",
+          "is singing",
+          "sings",
+          "was singing"
+        ],
+        answer: 1,
+        explanation: "Kata panggilan 'Listen!' dan waktu 'right now' menandakan kegiatan sedang berlangsung saat ini (Present Continuous: am/is/are + V-ing). Choir (tunggal) menggunakan 'is singing'."
+      },
+      {
+        id: 7,
+        category: "Past Continuous Tense",
+        passage: null,
+        question: "While I was studying English last night, my mother __________ dinner in the kitchen.",
+        options: [
+          "is cooking",
+          "cooked",
+          "was cooking",
+          "cooks"
+        ],
+        answer: 2,
+        explanation: "Dua kegiatan yang sedang terjadi secara bersamaan di masa lampau menggunakan pola Past Continuous Tense (was/were + V-ing)."
+      },
+      {
+        id: 8,
+        category: "Degrees of Comparison",
+        passage: null,
+        question: "An elephant is much __________ than a horse.",
+        options: [
+          "big",
+          "bigger",
+          "biggest",
+          "as big"
+        ],
+        answer: 1,
+        explanation: "Tingkat perbandingan 'lebih' (Comparative Degree) untuk kata sifat 1 suku kata 'big' adalah 'bigger' diikuti kata 'than'."
+      },
+      {
+        id: 9,
+        category: "Degrees of Comparison",
+        passage: null,
+        question: "Mount Everest is the __________ mountain peak in the world.",
+        options: [
+          "high",
+          "higher",
+          "highest",
+          "most high"
+        ],
+        answer: 2,
+        explanation: "Tingkat perbandingan 'paling' (Superlative Degree) ditandai dengan kata 'the' dan akhiran '-est' pada kata sifat pendek ('highest')."
+      },
+      {
+        id: 10,
+        category: "Degrees of Comparison",
+        passage: null,
+        question: "Your exam result this semester is __________ than last term. Good job!",
+        options: [
+          "good",
+          "better",
+          "best",
+          "more good"
+        ],
+        answer: 1,
+        explanation: "Kata sifat 'good' memiliki bentuk perbandingan tidak beraturan (Irregular Comparison): Good -> Better (lebih baik) -> Best (paling baik)."
+      },
+      {
+        id: 11,
+        category: "Recount Text",
+        passage: "\"Last Sunday, Maya visited her grandmother in a small village. She went there by train early in the morning. When she arrived, her grandmother welcomed her warmly. They spent the afternoon picking fresh apples in the orchard and making delicious apple pie together. Maya felt very happy because she loved spending time in the peaceful countryside.\"",
+        question: "What is the main idea of the text above?",
+        options: [
+          "Maya's experience visiting her grandmother in the village",
+          "How to make a delicious apple pie step by step",
+          "The schedule of train rides on Sunday morning",
+          "Why Maya's grandmother lives alone in the countryside"
+        ],
+        answer: 0,
+        explanation: "Gagasan utama (main idea) teks recount tersebut adalah menceritakan pengalaman pribadi Maya saat berkunjung ke rumah neneknya di desa."
+      },
+      {
+        id: 12,
+        category: "Recount Text",
+        passage: "Gunakan teks bacaan pada Soal No. 11 untuk menjawab soal ini.",
+        question: "How did Maya travel to her grandmother's house?",
+        options: [
+          "By bicycle",
+          "By train",
+          "By bus",
+          "On foot"
+        ],
+        answer: 1,
+        explanation: "Berdasarkan kalimat kedua pada teks ('She went there by train early in the morning'), Maya pergi naik kereta api (by train)."
+      },
+      {
+        id: 13,
+        category: "Narrative Text",
+        passage: "\"Once upon a time, a little Mouse accidentally woke up a sleeping Lion. The Lion was angry and caught the mouse, but the Mouse begged, 'Please spare me! One day I might help you.' The Lion laughed and let him go. A few days later, the Lion was caught in a hunter's net. Hearing the Lion's roar, the Mouse ran to him and chewed through the ropes until the Lion was free.\"",
+        question: "What can we learn from the story above (moral lesson)?",
+        options: [
+          "Never wake up a sleeping animal in the forest",
+          "Small friends can prove to be of great help",
+          "Lions are always stronger than hunters",
+          "Do not trust little animals in trouble"
+        ],
+        answer: 1,
+        explanation: "Pesan moral cerita fable ini adalah teman yang kecil sekalipun dapat memberikan pertolongan yang sangat berarti saat dibutuhkan."
+      },
+      {
+        id: 14,
+        category: "Narrative Text",
+        passage: "Gunakan teks cerita pada Soal No. 13 untuk menjawab soal ini.",
+        question: "\"He begged the lion to spare his life.\" The word 'He' refers to...",
+        options: [
+          "The Lion",
+          "The Hunter",
+          "The Mouse",
+          "The Author"
+        ],
+        answer: 2,
+        explanation: "Kata ganti 'He' merujuk pada si Tikus Kecil (The Mouse) yang memohon agar nyawanya tidak dihabisi oleh Singa."
+      },
+      {
+        id: 15,
+        category: "Notice & Caution",
+        passage: "[ NOTICE: KEEP OFF THE GRASS ]",
+        question: "What does the notice above mean?",
+        options: [
+          "People are allowed to sit on the grass",
+          "People are forbidden to walk or step on the grass",
+          "People should water the grass every day",
+          "People can play soccer on the grass"
+        ],
+        answer: 1,
+        explanation: "Pemberitahuan 'KEEP OFF THE GRASS' berarti larangan untuk menginjak atau berjalan di atas rumput (forbidden to walk/step on the grass)."
+      },
+      {
+        id: 16,
+        category: "Notice & Caution",
+        passage: "[ CAUTION: WET FLOOR ]",
+        question: "Where can you usually find this caution sign?",
+        options: [
+          "In the middle of a dry school field",
+          "Inside a quiet library reading room",
+          "In front of a freshly mopped or cleaned hallway",
+          "On the roof of a high-rise building"
+        ],
+        answer: 2,
+        explanation: "Tanda peringatan lantai basah (WET FLOOR) biasa dipasang di koridor atau lantai yang baru saja dipel/dibersihkan agar tidak ada yang terpeleset."
+      },
+      {
+        id: 17,
+        category: "Greeting Cards",
+        passage: "\"Dear Dito,\nCongratulations on your graduation! Wishing you all the best and continued success in high school!\nFrom: Uncle Sam\"",
+        question: "Why did Uncle Sam send the card to Dito?",
+        options: [
+          "To invite Dito to his birthday party",
+          "To congratulate Dito on his graduation",
+          "To apologize for not visiting Dito",
+          "To ask Dito about his high school exam"
+        ],
+        answer: 1,
+        explanation: "Kartu ucapan tersebut ditulis khusus untuk memberikan ucapan selamat atas kelulusan sekolah Dito (To congratulate Dito on his graduation)."
+      },
+      {
+        id: 18,
+        category: "Expressing Attention",
+        passage: null,
+        question: "Teacher: \"Excuse me, students! May I have your __________ please?\"\nStudents: \"Yes, Ma'am!\"",
+        options: [
+          "permission",
+          "attention",
+          "opinion",
+          "agreement"
+        ],
+        answer: 1,
+        explanation: "Frasa 'May I have your attention, please?' adalah ekspresi standar guru untuk meminta perhatian seluruh siswa di kelas."
+      },
+      {
+        id: 19,
+        category: "Prepositions of Time",
+        passage: null,
+        question: "Our school sports competition will start __________ Monday morning at 08.00 AM.",
+        options: [
+          "in",
+          "on",
+          "at",
+          "under"
+        ],
+        answer: 1,
+        explanation: "Preposisi 'on' digunakan sebelum nama hari spesifik atau bagian hari spesifik (contoh: on Monday, on Monday morning)."
+      },
+      {
+        id: 20,
+        category: "Expressing Willingness",
+        passage: null,
+        question: "Roni: \"These boxes look very heavy!\"\nLani: \"Don't worry, I __________ help you carry them to the teacher's room.\"",
+        options: [
+          "will",
+          "would not",
+          "am not",
+          "must"
+        ],
+        answer: 0,
+        explanation: "Kata 'will' digunakan untuk mengekspresikan kesediaan (willingness) membantu seseorang secara spontan pada saat berbicara."
+      }
+    ];
+
+    // -------------------------------------------------------------
+    // STATE VARIABLES
+    // -------------------------------------------------------------
+    let studentName = "";
+    let timerMode = "20";
+    let currentIdx = 0;
+    let userAnswers = {}; // { qIdx: optionIdx }
+    let flaggedQuestions = {}; // { qIdx: boolean }
+    let timerInterval = null;
+    let timeSpentSeconds = 0;
+    let totalSecondsAllowed = 1200; // 20 mins default
+    let isSoundMuted = false;
+    let activeFilterCategory = "All";
+
+    // -------------------------------------------------------------
+    // WEB AUDIO API SOUND ENGINE
+    // -------------------------------------------------------------
+    const AudioCtx = window.AudioContext || window.webkitAudioContext;
+    let audioCtx = null;
+
+    function playSynthSound(type) {
+      if (isSoundMuted) return;
+      try {
+        if (!audioCtx) audioCtx = new AudioCtx();
+        if (audioCtx.state === 'suspended') audioCtx.resume();
+
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+        osc.connect(gain);
+        gain.connect(audioCtx.destination);
+
+        const now = audioCtx.currentTime;
+
+        if (type === 'click') {
+          osc.frequency.setValueAtTime(600, now);
+          gain.gain.setValueAtTime(0.05, now);
+          gain.gain.exponentialRampToValueAtTime(0.001, now + 0.05);
+          osc.start(now);
+          osc.stop(now + 0.05);
+        } else if (type === 'select') {
+          osc.frequency.setValueAtTime(800, now);
+          gain.gain.setValueAtTime(0.08, now);
+          gain.gain.exponentialRampToValueAtTime(0.001, now + 0.08);
+          osc.start(now);
+          osc.stop(now + 0.08);
+        } else if (type === 'flag') {
+          osc.frequency.setValueAtTime(1000, now);
+          osc.frequency.exponentialRampToValueAtTime(1400, now + 0.1);
+          gain.gain.setValueAtTime(0.06, now);
+          gain.gain.exponentialRampToValueAtTime(0.001, now + 0.1);
+          osc.start(now);
+          osc.stop(now + 0.1);
+        } else if (type === 'finish') {
+          // Victory chord E5 - G#5 - B5
+          [659.25, 830.61, 987.77].forEach((freq, idx) => {
+            const o = audioCtx.createOscillator();
+            const g = audioCtx.createGain();
+            o.connect(g);
+            g.connect(audioCtx.destination);
+            o.frequency.setValueAtTime(freq, now + idx * 0.08);
+            g.gain.setValueAtTime(0.08, now + idx * 0.08);
+            g.gain.exponentialRampToValueAtTime(0.001, now + idx * 0.08 + 0.3);
+            o.start(now + idx * 0.08);
+            o.stop(now + idx * 0.08 + 0.3);
+          });
+        }
+      } catch (e) {
+        console.error(e);
+      }
+    }
+
+    function toggleSound() {
+      isSoundMuted = !isSoundMuted;
+      document.getElementById('icon-sound-on').classList.toggle('hidden', isSoundMuted);
+      document.getElementById('icon-sound-off').classList.toggle('hidden', !isSoundMuted);
+    }
+
+    function toggleTheme() {
+      const html = document.documentElement;
+      if (html.classList.contains('dark')) {
+        html.classList.remove('dark');
+        html.classList.add('light');
+      } else {
+        html.classList.remove('light');
+        html.classList.add('dark');
+      }
+      playSynthSound('click');
+    }
+
+    // -------------------------------------------------------------
+    // QUIZ FLOW LOGIC
+    // -------------------------------------------------------------
+    function startQuiz() {
+      const nameInput = document.getElementById('input-student-name').value.trim();
+      if (!nameInput) {
+        document.getElementById('error-name').classList.remove('hidden');
+        return;
+      }
+      document.getElementById('error-name').classList.add('hidden');
+      studentName = nameInput;
+
+      // Timer setup
+      const selectedTimer = document.querySelector('input[name="timer-mode"]:checked').value;
+      timerMode = selectedTimer;
+
+      if (timerMode === 'untimed') {
+        document.getElementById('container-timer').classList.add('hidden');
+      } else {
+        document.getElementById('container-timer').classList.remove('hidden');
+        totalSecondsAllowed = parseInt(timerMode) * 60;
+      }
+
+      // Hide start screen, show quiz screen
+      document.getElementById('screen-start').classList.add('hidden');
+      document.getElementById('screen-quiz').classList.remove('hidden');
+
+      playSynthSound('click');
+      startTimer();
+      renderQuestion();
+    }
+
+    function startTimer() {
+      timeSpentSeconds = 0;
+      clearInterval(timerInterval);
+
+      timerInterval = setInterval(() => {
+        timeSpentSeconds++;
+
+        if (timerMode !== 'untimed') {
+          const remaining = totalSecondsAllowed - timeSpentSeconds;
+          if (remaining <= 0) {
+            clearInterval(timerInterval);
+            finishQuiz();
+            return;
+          }
+          const mins = Math.floor(remaining / 60);
+          const secs = remaining % 60;
+          document.getElementById('timer-text').innerText = `${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
+        } else {
+          const mins = Math.floor(timeSpentSeconds / 60);
+          const secs = timeSpentSeconds % 60;
+          document.getElementById('timer-text').innerText = `${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
+        }
+      }, 1000);
+    }
+
+    function renderQuestion() {
+      const q = quizData[currentIdx];
+
+      // Badges & Progress
+      document.getElementById('badge-question-num').innerText = `Soal ${currentIdx + 1} dari ${quizData.length}`;
+      document.getElementById('badge-category').innerText = q.category;
+      
+      const pct = ((currentIdx + 1) / quizData.length) * 100;
+      document.getElementById('progress-bar-inner').style.width = `${pct}%`;
+
+      // Passage text box
+      const passageBox = document.getElementById('passage-box');
+      if (q.passage) {
+        passageBox.innerText = q.passage;
+        passageBox.classList.remove('hidden');
+      } else {
+        passageBox.classList.add('hidden');
+      }
+
+      // Question Text
+      document.getElementById('question-text').innerText = q.question;
+
+      // Options
+      const optionsContainer = document.getElementById('options-container');
+      optionsContainer.innerHTML = '';
+
+      const optionLabels = ['A', 'B', 'C', 'D'];
+      q.options.forEach((optText, optIdx) => {
+        const isSelected = userAnswers[currentIdx] === optIdx;
+        
+        const btn = document.createElement('button');
+        btn.onclick = () => selectOption(optIdx);
+        btn.className = `w-full text-left p-4 rounded-xl border transition flex items-start gap-3.5 group ${
+          isSelected 
+            ? 'border-indigo-600 bg-indigo-50/80 dark:bg-indigo-950/50 dark:border-indigo-500 ring-2 ring-indigo-500/20' 
+            : 'border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800/80 hover:border-slate-300 dark:hover:border-slate-600'
+        }`;
+
+        btn.innerHTML = `
+          <div class="w-7 h-7 rounded-lg flex items-center justify-center font-bold text-xs shrink-0 transition ${
+            isSelected 
+              ? 'bg-indigo-600 text-white' 
+              : 'bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 group-hover:bg-indigo-100 dark:group-hover:bg-slate-600'
+          }">
+            ${optionLabels[optIdx]}
+          </div>
+          <div class="text-sm md:text-base font-medium text-slate-800 dark:text-slate-200 mt-0.5 leading-relaxed">
+            ${optText}
+          </div>
+        `;
+
+        optionsContainer.appendChild(btn);
+      });
+
+      // Flag status
+      updateFlagUI();
+
+      // Prev Button State
+      document.getElementById('btn-prev').disabled = currentIdx === 0;
+
+      // Next / Submit Text
+      const textBtnNext = document.getElementById('text-btn-next');
+      if (currentIdx === quizData.length - 1) {
+        textBtnNext.innerText = "Selesaikan";
+      } else {
+        textBtnNext.innerText = "Selanjutnya";
+      }
+    }
+
+    function selectOption(optIdx) {
+      userAnswers[currentIdx] = optIdx;
+      playSynthSound('select');
+      renderQuestion();
+    }
+
+    function toggleFlag() {
+      flaggedQuestions[currentIdx] = !flaggedQuestions[currentIdx];
+      playSynthSound('flag');
+      updateFlagUI();
+    }
+
+    function updateFlagUI() {
+      const isFlagged = flaggedQuestions[currentIdx];
+      const icon = document.getElementById('icon-flag');
+      const text = document.getElementById('text-flag');
+
+      if (isFlagged) {
+        icon.setAttribute('fill', 'currentColor');
+        icon.className = 'w-4 h-4 text-amber-500';
+        text.innerText = 'Ditandai';
+      } else {
+        icon.setAttribute('fill', 'none');
+        icon.className = 'w-4 h-4 text-slate-400';
+        text.innerText = 'Tandai';
+      }
+    }
+
+    function prevQuestion() {
+      if (currentIdx > 0) {
+        currentIdx--;
+        playSynthSound('click');
+        renderQuestion();
+      }
+    }
+
+    function nextQuestion() {
+      if (currentIdx < quizData.length - 1) {
+        currentIdx++;
+        playSynthSound('click');
+        renderQuestion();
+      } else {
+        confirmSubmitModal();
+      }
+    }
+
+    // -------------------------------------------------------------
+    // QUESTION PALETTE & MODALS
+    // -------------------------------------------------------------
+    function togglePaletteModal() {
+      const modal = document.getElementById('modal-palette');
+      const isHidden = modal.classList.contains('hidden');
+
+      if (isHidden) {
+        renderPaletteGrid();
+        modal.classList.remove('hidden');
+      } else {
+        modal.classList.add('hidden');
+      }
+      playSynthSound('click');
+    }
+
+    function renderPaletteGrid() {
+      const grid = document.getElementById('palette-grid');
+      grid.innerHTML = '';
+
+      quizData.forEach((_, idx) => {
+        const isAnswered = userAnswers[idx] !== undefined;
+        const isFlagged = flaggedQuestions[idx];
+        const isCurrent = idx === currentIdx;
+
+        let bgClass = "bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300";
+        if (isCurrent) {
+          bgClass = "ring-2 ring-indigo-500 bg-indigo-100 dark:bg-indigo-950 text-indigo-700 dark:text-indigo-300 font-bold";
+        } else if (isAnswered) {
+          bgClass = "bg-indigo-600 text-white font-semibold";
+        }
+
+        const item = document.createElement('button');
+        item.onclick = () => {
+          currentIdx = idx;
+          togglePaletteModal();
+          renderQuestion();
+        };
+
+        item.className = `relative h-11 rounded-xl flex items-center justify-center text-xs transition ${bgClass}`;
+        item.innerText = idx + 1;
+
+        if (isFlagged) {
+          const badge = document.createElement('span');
+          badge.className = "absolute -top-1 -right-1 w-3.5 h-3.5 rounded-full bg-amber-400 border-2 border-white dark:border-slate-800";
+          item.appendChild(badge);
+        }
+
+        grid.appendChild(item);
+      });
+    }
+
+    function confirmSubmitModal() {
+      const answeredCount = Object.keys(userAnswers).length;
+      if (answeredCount < quizData.length) {
+        const remaining = quizData.length - answeredCount;
+        if (!confirm(`Masih ada ${remaining} soal yang belum dijawab. Apakah Anda yakin ingin menyelesaikan kuis?`)) {
+          return;
+        }
+      }
+      finishQuiz();
+    }
+
+    // -------------------------------------------------------------
+    // RESULT CALCULATION & REVIEW RENDER
+    // -------------------------------------------------------------
+    function finishQuiz() {
+      clearInterval(timerInterval);
+      playSynthSound('finish');
+
+      // Hide Quiz, Show Result
+      document.getElementById('screen-quiz').classList.add('hidden');
+      document.getElementById('modal-palette').classList.add('hidden');
+      document.getElementById('screen-result').classList.remove('hidden');
+
+      // Calculate score
+      let correctCount = 0;
+      quizData.forEach((q, idx) => {
+        if (userAnswers[idx] === q.answer) {
+          correctCount++;
+        }
+      });
+
+      const total = quizData.length;
+      const wrongCount = total - correctCount;
+      const score = Math.round((correctCount / total) * 100);
+      const accuracy = score;
+
+      // Render Hero Score
+      document.getElementById('result-score').innerText = score;
+      
+      // Ring stroke-dasharray animation
+      const ring = document.getElementById('score-ring');
+      ring.setAttribute('stroke-dasharray', `${score}, 100`);
+
+      // Grade logic
+      const gradeBadge = document.getElementById('result-grade-badge');
+      const feedback = document.getElementById('result-feedback');
+
+      if (score >= 90) {
+        gradeBadge.innerText = "Grade A+ (Sempurna)";
+        gradeBadge.className = "text-xl font-bold text-emerald-600 dark:text-emerald-400";
+        feedback.innerText = "Luar biasa! Pemahaman tata bahasa dan kosakata kamu sangat prima.";
+      } else if (score >= 80) {
+        gradeBadge.innerText = "Grade A (Sangat Baik)";
+        gradeBadge.className = "text-xl font-bold text-indigo-600 dark:text-indigo-400";
+        feedback.innerText = "Sangat baik! Kamu menguasai sebagian besar materi dengan cermat.";
+      } else if (score >= 70) {
+        gradeBadge.innerText = "Grade B (Cukup)";
+        gradeBadge.className = "text-xl font-bold text-amber-600 dark:text-amber-400";
+        feedback.innerText = "Hasil yang bagus! Tinjau kembali beberapa soal untuk lebih paham.";
+      } else {
+        gradeBadge.innerText = "Grade C (Perlu Latihan)";
+        gradeBadge.className = "text-xl font-bold text-rose-600 dark:text-rose-400";
+        feedback.innerText = "Jangan berkecil hati! Pelajari pembahasan lengkap di bawah ini.";
+      }
+
+      // Stats
+      document.getElementById('stat-correct').innerText = correctCount;
+      document.getElementById('stat-wrong').innerText = wrongCount;
+      document.getElementById('stat-accuracy').innerText = `${accuracy}%`;
+
+      const mins = Math.floor(timeSpentSeconds / 60);
+      const secs = timeSpentSeconds % 60;
+      document.getElementById('stat-time').innerText = `${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
+
+      // Printable fields
+      document.getElementById('print-student-name').innerText = studentName;
+      document.getElementById('print-date').innerText = new Date().toLocaleDateString('id-ID', {
+        weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'
+      });
+
+      renderFilterChips();
+      renderReviewList();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function renderFilterChips() {
+      const categories = ["All", ...new Set(quizData.map(q => q.category))];
+      const container = document.getElementById('filter-container');
+      container.innerHTML = '';
+
+      categories.forEach(cat => {
+        const isActive = activeFilterCategory === cat;
+        const chip = document.createElement('button');
+        chip.onclick = () => {
+          activeFilterCategory = cat;
+          renderFilterChips();
+          renderReviewList();
+          playSynthSound('click');
+        };
+
+        chip.className = `px-3 py-1 rounded-lg text-xs font-semibold transition ${
+          isActive 
+            ? 'bg-indigo-600 text-white' 
+            : 'bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 hover:bg-slate-200'
+        }`;
+        chip.innerText = cat;
+        container.appendChild(chip);
+      });
+    }
+
+    function renderReviewList() {
+      const container = document.getElementById('review-list');
+      container.innerHTML = '';
+
+      const filtered = quizData.filter(q => activeFilterCategory === "All" || q.category === activeFilterCategory);
+
+      filtered.forEach((q) => {
+        const origIdx = q.id - 1;
+        const userChoice = userAnswers[origIdx];
+        const isCorrect = userChoice === q.answer;
+        const optionLabels = ['A', 'B', 'C', 'D'];
+
+        const item = document.createElement('div');
+        item.className = `p-5 rounded-2xl border break-inside-avoid transition ${
+          isCorrect 
+            ? 'bg-emerald-50/40 dark:bg-emerald-950/20 border-emerald-200 dark:border-emerald-800/60' 
+            : 'bg-rose-50/40 dark:bg-rose-950/20 border-rose-200 dark:border-rose-800/60'
+        }`;
+
+        let userAnsText = userChoice !== undefined ? `${optionLabels[userChoice]}. ${q.options[userChoice]}` : 'Tidak dijawab';
+        let correctAnsText = `${optionLabels[q.answer]}. ${q.options[q.answer]}`;
+
+        item.innerHTML = `
+          <div class="flex items-center justify-between gap-2 mb-2">
+            <span class="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">
+              Soal #${q.id} • ${q.category}
+            </span>
+            <span class="px-2.5 py-0.5 rounded-full text-xs font-bold ${
+              isCorrect ? 'bg-emerald-100 dark:bg-emerald-900 text-emerald-700 dark:text-emerald-300' : 'bg-rose-100 dark:bg-rose-900 text-rose-700 dark:text-rose-300'
+            }">
+              ${isCorrect ? '✓ Benar' : '✕ Salah'}
+            </span>
+          </div>
+
+          ${q.passage ? `<p class="text-xs italic text-slate-600 dark:text-slate-400 mb-2 p-3 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800">${q.passage}</p>` : ''}
+
+          <h4 class="text-sm md:text-base font-bold text-slate-900 dark:text-white mb-3">
+            ${q.question}
+          </h4>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-xs md:text-sm mb-3">
+            <div class="p-2.5 rounded-xl ${isCorrect ? 'bg-emerald-100/60 dark:bg-emerald-900/40 text-emerald-900 dark:text-emerald-200' : 'bg-rose-100/60 dark:bg-rose-900/40 text-rose-900 dark:text-rose-200'}">
+              <span class="font-bold">Jawaban Anda:</span> ${userAnsText}
+            </div>
+            <div class="p-2.5 rounded-xl bg-emerald-100/60 dark:bg-emerald-900/40 text-emerald-900 dark:text-emerald-200">
+              <span class="font-bold">Kunci Jawaban:</span> ${correctAnsText}
+            </div>
+          </div>
+
+          <div class="p-3.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 text-xs md:text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+            <span class="font-bold text-indigo-600 dark:text-indigo-400">Pembahasan:</span> ${q.explanation}
+          </div>
+        `;
+
+        container.appendChild(item);
+      });
+    }
+
+    function retakeQuiz() {
+      userAnswers = {};
+      flaggedQuestions = {};
+      currentIdx = 0;
+      activeFilterCategory = "All";
+
+      document.getElementById('screen-result').classList.add('hidden');
+      document.getElementById('screen-start').classList.remove('hidden');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>
